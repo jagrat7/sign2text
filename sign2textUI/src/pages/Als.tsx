@@ -44,7 +44,7 @@ const Als = () => {
                 formData.append("image", dataURItoBlob(imageSrc));
                 formData.append("roomId", roomid+"");
 
-                const response = await fetch(import.meta.env.VITE_IMAGE_SERVICE, {
+                const response = await fetch('http://3.233.207.236:5000/upload-image', {
                     method: "POST",
                     body: formData,
                 });
@@ -104,6 +104,18 @@ const Als = () => {
                 </Grid>
 
 
+                {url && (
+                    <>
+                        <Box marginTop={"40%"}>
+                            <Button onClick={() => { setUrl(null); }}>
+                                delete
+                            </Button>
+                        </Box>
+                        <div>
+                            <img src={url} alt="Screenshot" />
+                        </div>
+                    </>
+                )}
             </Container>
         </div>
 
