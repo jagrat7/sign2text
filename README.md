@@ -3,21 +3,21 @@ Provide individuals who primarily rely on American Sign Language (ASL) to commun
 translation to one or multiple audience through a virtual room.
 
 ## MVPs
-• User must be able to access the cloud hosted application from any web browser.
-• Any user must be able to create or join a room. (restricted to 1 room for MVP)
-• User must be able to join room either as ASL or non ASL user by entering name.
-• Provide a mechanism for ASL user to capture hand gestures through a camera and click photos to be
+- User must be able to access the cloud hosted application from any web browser.
+- Any user must be able to create or join a room. (restricted to 1 room for MVP)
+- User must be able to join room either as ASL or non ASL user by entering name.
+- Provide a mechanism for ASL user to capture hand gestures through a camera and click photos to be
 translated.
-• The translated text generated from photos must be displayed on the Non-ASL/ASL end with low
+- The translated text generated from photos must be displayed on the Non-ASL/ASL end with low
 latency.
-• Application is restricted to ASL characters for MVP. Communication was restricted to one way for
+- Application is restricted to ASL characters for MVP. Communication was restricted to one way for
 MVP.
 ### Enhancements Done
-• Bidirectional Communication: All users (both ASL and non ASL) in the same room can communicate simultaneously and remotely.
-• Creation and isolation of users by multiple chat rooms.
+- Bidirectional Communication: All users (both ASL and non ASL) in the same room can communicate simultaneously and remotely.
+- Creation and isolation of users by multiple chat rooms.
 
 ## Architecture Diagram
-![Architecture Diagram](docs/architecture_diagram.png)
+![Architecture Diagram](/docs/arch_diagram.png)
 
 Amplify: used to deploy the front-end React application.
 EC2: used to host the Message transformation service, Chatroom Service, and ML service.
@@ -34,4 +34,4 @@ ECS: used to host and manage the deployment of Chatroom Service containers.
 This infrastructure was set up and deployed using terraform.
 
 ## Image Recognition
-![Image Recognition](docs/img_rec)
+![Image Recognition](/docs/img_rec.png)
