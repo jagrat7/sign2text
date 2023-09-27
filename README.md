@@ -10,25 +10,22 @@ translation to one or multiple audience through a virtual room.
 translated.
 - The translated text generated from photos must be displayed on the Non-ASL/ASL end with low
 latency.
-- Application is restricted to ASL characters for MVP. Communication was restricted to one way for
-MVP.
-### Enhancements Done
 - Bidirectional Communication: All users (both ASL and non ASL) in the same room can communicate simultaneously and remotely.
 - Creation and isolation of users by multiple chat rooms.
 
 ## Architecture Diagram
 ![Architecture Diagram](/docs/arch_diagram.png)
 
-Amplify: used to deploy the front-end React application.
-EC2: used to host the Message transformation service, Chatroom Service, and ML service.
-Kafka: used to route and store messages between the different services. Also used to manage rooms (topics).
-Sage Maker Notebooks: Experiment and Train AWS models
-Sage Maker inference: Provide predictions through a REST endpoint.
-S3: used to store training data and models.
-DynamoDB: used to store details of chat rooms and Kafka topics.
-Application Load Balancer: used to route requests among multiple ECS containers running Chatroom Service.
-CloudWatch: used to monitor various applications and services.
-ECS: used to host and manage the deployment of Chatroom Service containers.
+- Amplify: used to deploy the front-end React application.
+- EC2: used to host the Message transformation service, Chatroom Service, and ML service.
+- Kafka: used to route and store messages between the different services. Also used to manage rooms (topics).
+- Sage Maker Notebooks: Experiment and Train AWS models
+- Sage Maker inference: Provide predictions through a REST endpoint.
+- S3: used to store training data and models.
+- DynamoDB: used to store details of chat rooms and Kafka topics.
+- Application Load Balancer: used to route requests among multiple ECS containers running Chatroom Service.
+- CloudWatch: used to monitor various applications and services.
+- ECS: used to host and manage the deployment of Chatroom Service containers.
 
 #### Note
 This infrastructure was set up and deployed using terraform.
